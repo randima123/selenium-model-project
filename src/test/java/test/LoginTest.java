@@ -1,30 +1,31 @@
 package test;
 
-import org.testng.Assert;
+import fragment.LoginFragment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.HomePage;
-import page.LoginPage;
+
+import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
-    private LoginPage loginPage;
+    private LoginFragment loginFragment;
 
     @BeforeMethod
     public void loginBeforeMethod() {
-        loginPage = new LoginPage(driver);
+        loginFragment = new LoginFragment(driver);
     }
 
     @Test
     public void testValidLogin() {
-        loginPage.login("randima@mailinator.com","abc123");
-        Assert.assertEquals(new HomePage(driver).getLoggedInUsername(), "Randima Senanayake",
+        loginFragment.login("randima@mailinator.com","abc123");
+        assertEquals(new HomePage(driver).getLoggedInUsername(), "Randima Senanayake",
                 "Logged in username invalid \n");
     }
 
     @Test
     public void testInvalidLogin() {
-        loginPage.login("randima@mailinator.com","abc12");
-        Assert.assertEquals(driver.getTitle(), "Login - My Store");
+        loginFragment.login("randima@mailinator.com","abc12");
+        assertEquals(driver.getTitle(), "Login - My Store");
     }
 }
