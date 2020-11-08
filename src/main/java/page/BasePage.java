@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BasePage {
 
-    public WebDriver driver;
+    public static WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
