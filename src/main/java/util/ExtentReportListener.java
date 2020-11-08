@@ -14,7 +14,7 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 
-import static util.ScreenshotGenerator.takeScreenshot;
+import static page.BasePage.takeScreenshot;
 
 public class ExtentReportListener implements ITestListener {
 
