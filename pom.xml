@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.selenium.demo</groupId>
-    <artifactId>selenium-model-project</artifactId>
+    <artifactId>selenium-page-object-model</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -23,6 +23,11 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>3.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.6</version>
         </dependency>
     </dependencies>
 
