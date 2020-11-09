@@ -56,8 +56,8 @@ public class ExtentReportListener implements ITestListener {
         test.log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName(), ExtentColor.RED));
         test.log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getThrowable().getMessage(), ExtentColor.RED));
         try {
-            test.fail("Screenshot at the failed moment is below " +
-                    test.addScreenCaptureFromPath(takeScreenshot(iTestResult.getName())));
+            test.fail("Screenshot at the failed moment is below.");
+            test.addScreenCaptureFromPath(takeScreenshot(iTestResult.getName()), iTestResult.getMethod().getMethodName());
         } catch (IOException e) {
             e.printStackTrace();
         }
