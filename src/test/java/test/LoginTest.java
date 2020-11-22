@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void testValidLogin() {
-        loginFragment.login("randima@mailinator.com","abc123");
+        loginFragment.login("randima@mailinator.com","abc1234");
         assertEquals(new HomePage(driver).getLoggedInUsername(), "Randima Senanayake",
                 "Logged in username invalid \n");
     }
